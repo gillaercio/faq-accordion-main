@@ -1,15 +1,15 @@
 body {
-  background: no-repeat url('/assets/images/background-pattern-mobile.svg');
-  /* background: url('/assets/images/background-pattern-mobile.svg') no-repeat; */
-  /* background-position: top; */
+  background-image: url(../images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: contain;
+  background-attachment: fixed;
   background-color: var(--Light-pink);
   display: grid;
   grid-gap: 5px;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  font-family: 'Work', serif;
 }
 
 #content {
@@ -18,14 +18,14 @@ body {
   max-width: 320px;
   background-color: var(--White);
   border-radius: 8px;
-  padding: 30px;
+  padding: 25px 31px;
   box-shadow: 0px 0px 30px var(--Grayish-purple);
 }
 
 .header-content {
   display: grid;
   grid-gap: 30px;
-  margin-top: 10px;
+  width: 150px;
   grid-template-columns: repeat(2, auto);
   align-items: center;
 }
@@ -35,25 +35,20 @@ body {
 }
 
 .header-content h1 {
-  font-size: 3.5em;
-  font-weight: 700;
-}
-
-.questions {
-  font-size: 1.6em;
-  font-weight: 600;
+  font: var(--text-lg);
+  justify-self: start;
 }
 
 .question {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
-  justify-content: space-between;
+  font: var(--text-md);
 }
 
 .question p {
-  /* width: 220px; */
-  padding-block: 25px;
+  max-width: 220px;
+  padding-block: 15px;
 }
 
 .icon {
@@ -63,42 +58,40 @@ body {
 
 .answer {
   opacity: .4;
+  font: var(--text-sm);
 }
 
 hr {
-  margin-top: 25px;
-  opacity: .3;
+  margin-top: 15px;
+  border: 0;
+  height: 2px;
+  background-color: var(--Light-pink);
 }
 
 .attribution {
-  font-size: 1.2em;
+  font: var(--text-sm);
   align-self: start;
   text-align: center;
 }
 
 .attribution a {
   color: black;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .attribution a:hover {
   color: var(--Footer);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 612px) {
   body {
-    background: no-repeat url('/assets/images/background-pattern-desktop.svg');
-    /* background-size: contain; */
-    /* background-position: top; */
+    background-image: url(../images/background-pattern-desktop.svg);
   }
 
   #content {
     max-width: 590px;
-  }
-
-  .header-content {
-    width: 150px;
   }
 
   .icon-star {
@@ -107,5 +100,9 @@ hr {
   
   .header-content h1 {
     font-size: 4em;
+  }
+
+  .question p {
+    max-width: 450px;
   }
 }
