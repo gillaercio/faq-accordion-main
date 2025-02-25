@@ -135,9 +135,9 @@ hr {
   .question p {
     width: 900px;
     padding-block: 20px;
-    font-size: 1.7em;
   }
 
+  .question p,
   .answer,
   .attribution {
     font-size: 1.7em;
