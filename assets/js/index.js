@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const image = this.querySelector('.icon');
       if (answer.style.display === 'none' || answer.style.display === '') {
         answer.style.display = 'block';
-        image.src = '/assets/images/icon-minus.svg';
+        image.src = '../images/icon-minus.svg';
+        image.alt = 'icon minus';
       } else {
         answer.style.display = 'none';
-        image.src = '/assets/images/icon-plus.svg';
+        image.src = '../images/icon-plus.svg';
+        image.alt = 'icon plus';
       };
     });
   });
